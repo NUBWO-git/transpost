@@ -1,0 +1,59 @@
+<mat-toolbar class="flex items-center px-4 relative">
+   <!-- โลโก้ -->
+   <div class="logo">
+      <img src="/assets/PPAP-.png" alt="โลโก้" class="h-10" />
+   </div>
+
+   <!-- กลุ่มไอคอนที่อยู่ตรงกลาง -->
+   <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
+      <!-- ไอคอน laptop -->
+      <button mat-icon-button class="favorite-icon" aria-label="Example icon-button with heart icon">
+         <mat-icon>laptop</mat-icon>
+      </button>
+
+      <!-- เส้นแบ่ง -->
+      <div class="w-[2px] h-6 bg-blue-500"></div>
+
+      <!-- ไอคอน smartphone -->
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+         <mat-icon>smartphone</mat-icon>
+      </button>
+   </div>
+
+   <!-- กลุ่มค้นหาและ account -->
+   <div class="flex items-center space-x-2 ml-auto">
+      <!-- ช่องค้นหา -->
+      <input type="text" placeholder="ค้นหา" class="h-8 border border-gray-300 rounded px-2 text-sm" />
+      <button mat-icon-button aria-label="Search">
+         <mat-icon>search</mat-icon>
+      </button>
+
+      <!-- ไอคอน account -->
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+         <mat-icon>account_circle</mat-icon>
+      </button>
+   </div>
+
+   <!-- เมนู -->
+   <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="showLogin = true">
+         <span>เข้าสู่ระบบ</span>
+      </button>
+      <button mat-menu-item>
+         <span>สมัครสมาชิก</span>
+      </button>
+   </mat-menu>
+</mat-toolbar>
+
+<header class="bg-primary flex justify-center items-center h-12">
+   <nav class="flex space-x-8 text-white">
+      <a routerLink="/home" class="hover:underline">หน้าหลัก</a>
+      <a routerLink="/about" class="hover:underline">เกี่ยวกับ</a>
+      <a routerLink="/services" class="hover:underline">บริการ</a>
+      <a routerLink="/guides" class="hover:underline">คำแนะนำ</a>
+      <a routerLink="/contact" class="hover:underline">ติดต่อเรา</a>
+   </nav>
+</header>
+
+
+<app-login *ngIf="showLogin" (closeLogin)="showLogin = false"></app-login>

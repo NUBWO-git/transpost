@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* จัดการ style สำหรับ mat-toolbar */
+mat-toolbar {
+   display: flex;
+   align-items: center; /* จัดตำแหน่งแนวตั้งให้อยู่ตรงกลาง */
+   justify-content: space-between; /* จัดโลโก้และส่วนค้นหาให้อยู่ซ้าย-ขวา */
+   padding: 0 16px; /* เพิ่มระยะห่างจากขอบ */
+   background-color: #ffffff; /* กำหนดสีพื้นหลัง */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เงาใต้ toolbar */
+}
+
+/* โลโก้ */
+.logo img {
+   height: 40px; /* กำหนดความสูงของโลโก้ */
+}
+
+/* Spacer ใช้สำหรับดันส่วนที่เหลือ */
+.example-spacer {
+   flex: 1; /* ดันส่วนอื่นไปด้านขวา */
+}
+
+/* กลุ่มไอคอนตรงกลาง */
+.center-icons {
+   display: flex;
+   align-items: center; /* จัดตำแหน่งไอคอนให้อยู่กึ่งกลางในแนวตั้ง */
+   gap: 16px; /* เพิ่มระยะห่างระหว่างไอคอน */
+}
+
+/* เส้นแบ่ง */
+.divider {
+   width: 1px;
+   height: 24px;
+   background-color: #ccc; /* สีเส้นแบ่ง */
+}
+
+/* กลุ่มค้นหา */
+.search-container {
+   display: flex;
+   align-items: center;
+   gap: 8px; /* ระยะห่างระหว่างช่องค้นหาและปุ่มค้นหา */
+}
+
+.search-input {
+   height: 32px; /* ความสูงช่องค้นหา */
+   border: 1px solid #ccc; /* สีกรอบ */
+   border-radius: 4px; /* ขอบมน */
+   padding: 0 8px; /* ระยะห่างภายใน */
+   font-size: 14px; /* ขนาดตัวอักษร */
+}
+
+/* ปุ่มค้นหา */
+.search-container button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.bg-primary {
+   background-color: #1f3d57; /* สีน้ำเงิน */
+   color: white; /* สีข้อความ */
+}
+
+header a {
+   font-size: 16px;
+   font-weight: 500;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+header a:hover {
+   color: #ffcc00; /* สีข้อความเมื่อชี้เมาส์ */
+}
